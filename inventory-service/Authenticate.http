@@ -1,0 +1,17 @@
+POST http://localhost:8080/realms/ecommerce-realm/protocol/openid-connect/token
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+
+# 3 mode of grant_type=password -> il faut envoyer le client_id, username et pwd
+
+# 1: with pwd
+grant_type=password&client_id=ecommerce-web-angular&client_secret=7TD6G0WnahiA2tCtrn5KlzuaLya8wl7r&username=radhouan&password=1234
+
+#2: with refresh token
+#grant_type=refresh_token&client_id=ecommerce-web-angular&refresh_token=eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwYTY4MmM0Yi01M2JhLTQ0OTItYWFkYi05MGZmM2FkNTU0NmMifQ.eyJleHAiOjE3MDgwNjk5MzcsImlhdCI6MTcwODA2ODEzNywianRpIjoiNTYxNGQ2OTUtY2QzNi00OTRlLThhMjgtOTBiNWVhZmI5ZTQ4IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL3JlYWxtcy9lY29tbWVyY2UtcmVhbG0iLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjgwODAvcmVhbG1zL2Vjb21tZXJjZS1yZWFsbSIsInN1YiI6IjczYzM4ODkxLTI2NmYtNDRhYS04NzcxLWE1MDc1N2Q0ODYzNyIsInR5cCI6IlJlZnJlc2giLCJhenAiOiJlY29tbWVyY2Utd2ViLWFuZ3VsYXIiLCJzZXNzaW9uX3N0YXRlIjoiNGJiZmI4ODktNmVlMi00YTUxLWI3YWMtMGE4ZTRlZTIyNjFhIiwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiNGJiZmI4ODktNmVlMi00YTUxLWI3YWMtMGE4ZTRlZTIyNjFhIn0.rSjSg-wkplmTaS9QXtkrwBliYRVduPbX8yOMaR1fZ7g
+
+#3: client secret
+#grant_type=client_credentials&client_id=ecommerce-web-angular&client_secret=7TD6G0WnahiA2tCtrn5KlzuaLya8wl7r
+
+
+## Why we need the client_secret ??
